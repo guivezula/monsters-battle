@@ -19,6 +19,7 @@ server.get('/monsters', (req, res) => {
 
 server.post('/battle', (req, res) => {
   const { monster1Id, monster2Id } = req.body;
+  console.log('body', req.body);
 
   if (!monster1Id || !monster2Id) {
     return res.status(400).jsonp({ message: 'Missing ID' });
